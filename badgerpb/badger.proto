@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package badgerpb;
+option go_package = "./badgerpb";
+
+service Badger {
+  rpc GetPrefecture (PrefRequest) returns (PrefResponse) {}
+}
+
+message PrefRequest {
+  string company = 1;
+}
+
+message PrefResponse {
+  string prefecture = 1;
+}

@@ -10,6 +10,7 @@ FROM alpine
 
 WORKDIR /pantogram
 
+ARG PROTOCOL
 COPY --from=build /pantogram/badger ./badger
 COPY --from=build /pantogram/store/prefecture.json ./store/prefecture.json
 
